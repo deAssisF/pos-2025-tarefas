@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cardapio>
+    <comida id="Comida_1">
+        <nome>Pão de Queijo Mineiro</nome>
+        <descricacao>Delicioso pão de queijo tradicional de Minas Gerais</descricacao>
+        <ingredientes>Polvilho, queijo minas e leite</ingredientes>
+        <preco>15R$</preco>
+        <calorias>150kcal</calorias>
+        <tempo_estimado>20minutos</tempo_estimado>
+    </comida>
+    <comida id="Comida_2">
+        <nome>Feijoada Completa</nome>
+        <descricacao>Prato tradicional brasileiro com feijão preto e variedade de carnes</descricacao>
+        <ingredientes>Feijão preto, linguiça, costela e couve</ingredientes>
+        <preco>45R$</preco>
+        <calorias>850kcal</calorias>
+        <tempo_estimado>4h</tempo_estimado>
+    </comida>
+    <comida id="Comida_3">
+        <nome>Brigadeiro Gourmet</nome>
+        <descricacao>Doce brasileiro com chocolate 70% e granulado especial</descricacao>
+        <ingredientes>Chocolate amargo, leite condensado e manteiga</ingredientes>
+        <preco>8R$</preco>
+        <calorias>120kcal</calorias>
+        <tempo_estimado>25minutos</tempo_estimado>
+    </comida>
+    <comida id="Comida_4">
+        <nome>Moqueca Capixaba</nome>
+        <descricacao>Peixe cozido em panela de barro com açafrão e coentro</descricacao>
+        <ingredientes>Peixe branco, tomate, cebola e azeite de dendê</ingredientes>
+        <preco>55R$</preco>
+        <calorias>320kcal</calorias>
+        <tempo_estimado>50minutos</tempo_estimado>
+    </comida>
+    <comida id="Comida_5">
+        <nome>Coxinha de Frango</nome>
+        <descricacao>Salgado em forma de gota com recheio cremoso de frango</descricacao>
+        <ingredientes>Massa de batata, frango desfiado e catupiry</ingredientes>
+        <preco>7R$</preco>
+        <calorias>250kcal</calorias>
+        <tempo_estimado>40minutos</tempo_estimado>
+    </comida>
+</cardapio>
