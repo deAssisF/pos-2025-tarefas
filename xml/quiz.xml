@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz versao="1.0">
+    <disciplina>Matemática</disciplina>
+    <professor>
+        <nome>Dokinhajunior</nome>
+        <matrícula>20221181110021</matrícula>
+    </professor>
+    <turma>4º Ano</turma>
+    <data>2025-05-22</data>
+    <questões>
+        <questão>
+            <enunciado>Qual é o resultado de 2 + 2?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">3</alternativa>
+                <alternativa correta="sim">4</alternativa>
+                <alternativa correta="nao">5</alternativa>
+                <alternativa correta="nao">6</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Qual é o valor de π (pi) arredondado a duas casas decimais?</enunciado>
+            <pontuação>2</pontuação>
+            <alternativas>
+                <alternativa correta="nao">3.12</alternativa>
+                <alternativa correta="sim">3.14</alternativa>
+                <alternativa correta="nao">3.16</alternativa>
+                <alternativa correta="nao">3.18</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Qual é a raiz quadrada de 16?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">2</alternativa>
+                <alternativa correta="sim">4</alternativa>
+                <alternativa correta="nao">6</alternativa>
+                <alternativa correta="nao">8</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Qual é o maior número primo menor que 10?</enunciado>
+            <pontuação>2</pontuação>
+            <alternativas>
+                <alternativa correta="nao">4</alternativa>
+                <alternativa correta="nao">6</alternativa>
+                <alternativa correta="sim">7</alternativa>
+                <alternativa correta="nao">9</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Quanto é 5 x 6?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">25</alternativa>
+                <alternativa correta="sim">30</alternativa>
+                <alternativa correta="nao">35</alternativa>
+                <alternativa correta="nao">40</alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+</quiz>

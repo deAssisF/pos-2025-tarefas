@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imobiliaria [
+    <!ELEMENT imobiliaria (imovel+)>
+    <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+    <!ATTLIST imovel id ID #REQUIRED>
+    <!ELEMENT descricao (#PCDATA)>
+    <!ELEMENT proprietario (nome, (email|telefone)+)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT telefone (#PCDATA)>
+    <!ELEMENT endereco (rua, numero?, bairro, cidade, estado)>
+    <!ELEMENT rua (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT bairro (#PCDATA)>
+    <!ELEMENT cidade (#PCDATA)>
+    <!ELEMENT estado (#PCDATA)>
+    <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+    <!ELEMENT tamanho (#PCDATA)>
+    <!ELEMENT numQuartos (#PCDATA)>
+    <!ELEMENT numBanheiros (#PCDATA)>
+    <!ELEMENT valor (#PCDATA)>
+    <!ATTLIST valor moeda CDATA #REQUIRED>
+]>
+
+<imobiliaria>
+    <imovel id="Imovel_1">
+        <descricao>Apartamento moderno no centro da cidade</descricao>
+        <proprietario>
+            <nome>João Silva</nome>
+            <email>joao.silva@email.com</email>
+            <telefone>+55 11 98765-4321</telefone>
+            <telefone>+55 11 91234-5678</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua das Flores</rua>
+            <numero>123</numero>
+            <bairro>Centro</bairro>
+            <cidade>São Paulo</cidade>
+            <estado>SP</estado>
+        </endereco>
+        <caracteristicas>
+            <tamanho>85 m²</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor moeda="BRL">450000</valor>
+    </imovel>
+
+    <imovel id="Imovel_2">
+        <descricao>Casa ampla com quintal</descricao>
+        <proprietario>
+            <nome>Maria Oliveira</nome>
+            <telefone>+55 21 99876-5432</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Avenida das Palmeiras</rua>
+            <numero>456</numero>
+            <bairro>Jardim das Acácias</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            <estado>RJ</estado>
+        </endereco>
+        <caracteristicas>
+            <tamanho>200 m²</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor moeda="BRL">850000</valor>
+    </imovel>
+
+    <imovel id="Imovel_3">
+        <descricao>Kitnet compacta e funcional</descricao>
+        <proprietario>
+            <nome>Pedro Santos</nome>
+            <email>pedro.santos@email.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua do Sol</rua>
+            <numero>78</numero>
+            <bairro>Vila Nova</bairro>
+            <cidade>Curitiba</cidade>
+            <estado>PR</estado>
+        </endereco>
+        <caracteristicas>
+            <tamanho>30 m²</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor moeda="BRL">120000</valor>
+    </imovel>
+
+    <imovel id="Imovel_4">
+        <descricao>Sobrado com piscina</descricao>
+        <proprietario>
+            <nome>Ana Costa</nome>
+            <telefone>+55 31 98765-4321</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua das Acácias</rua>
+            <numero></numero>
+            <bairro>Jardim Primavera</bairro>
+            <cidade>Belo Horizonte</cidade>
+            <estado>MG</estado>
+        </endereco>
+        <caracteristicas>
+            <tamanho>250 m²</tamanho>
+            <numQuartos>5</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor moeda="BRL">1200000</valor>
+    </imovel>
+
+    <imovel id="Imovel_5">
+        <descricao>Chácara com área verde</descricao>
+        <proprietario>
+            <nome>Lucas Almeida</nome>
+            <email>lucas.almeida@email.com</email>
+            <telefone>+55 19 91234-5678</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Estrada do Campo</rua>
+            <numero>SN</numero>
+            <bairro>Zona Rural</bairro>
+            <cidade>Campinas</cidade>
+            <estado>SP</estado>
+        </endereco>
+        <caracteristicas>
+            <tamanho>5000 m²</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor moeda="BRL">2500000</valor>
+    </imovel>
+</imobiliaria>
