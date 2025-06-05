@@ -20,8 +20,20 @@
             <attribute name="id" type="integer" use="required"/>
         </complexType>
     </element>
-    <element name="nome" type="string"/>
-    <element name="descricao" type="string"/>
+    <element name="nome">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="descricao">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="255"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="ingredientes">
         <complexType>
             <sequence>
@@ -29,15 +41,47 @@
             </sequence>
         </complexType>
     </element>
-    <element name="ingrediente" type="string"/>
+    <element name="ingrediente">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="50"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="preco">
         <complexType>
             <sequence>
-                <element name="moeda" type="string"/>
-                <element name="valor" type="decimal"/>
+                <element name="moeda">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="BRL"/>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="valor">
+                    <simpleType>
+                        <restriction base="decimal">
+                            <fractionDigits value="2"/>
+                            <totalDigits value="10"/>
+                        </restriction>
+                    </simpleType>
+                </element>
             </sequence>
         </complexType>
     </element>
-    <element name="calorias" type="integer"/>
-    <element name="tempoPreparo" type="string"/>
+    <element name="calorias">
+        <simpleType>
+            <restriction base="integer">
+                <minInclusive value="0"/>
+                <maxInclusive value="5000"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="tempoPreparo">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="50"/>
+            </restriction>
+        </simpleType>
+    </element>
 </schema>

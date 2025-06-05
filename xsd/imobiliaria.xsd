@@ -18,7 +18,13 @@
             </sequence>
         </complexType>
     </element>
-    <element name="descricao" type="string"/>
+    <element name="descricao">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="255"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="proprietario">
         <complexType>
             <sequence>
@@ -30,9 +36,27 @@
             </sequence>
         </complexType>
     </element>
-    <element name="nome" type="string"/>
-    <element name="email" type="string"/>
-    <element name="telefone" type="string"/>
+    <element name="nome">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="email">
+        <simpleType>
+            <restriction base="string">
+                <pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="telefone">
+        <simpleType>
+            <restriction base="string">
+                <pattern value="\+?[0-9\s\-]+"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="endereco">
         <complexType>
             <sequence>
@@ -43,10 +67,35 @@
             </sequence>
         </complexType>
     </element>
-    <element name="rua" type="string"/>
-    <element name="numero" type="integer"/>
-    <element name="bairro" type="string"/>
-    <element name="cidade" type="string"/>
+    <element name="rua">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="numero">
+        <simpleType>
+            <restriction base="integer">
+                <minInclusive value="0"/>
+                <maxInclusive value="99999"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="bairro">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="cidade">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="caracteristicas">
         <complexType>
             <sequence>
@@ -56,14 +105,48 @@
             </sequence>
         </complexType>
     </element>
-    <element name="tamanho" type="decimal"/>
-    <element name="numQuartos" type="integer"/>
-    <element name="numBanheiros" type="integer"/>
+    <element name="tamanho">
+        <simpleType>
+            <restriction base="decimal">
+                <fractionDigits value="2"/>
+                <totalDigits value="10"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="numQuartos">
+        <simpleType>
+            <restriction base="integer">
+                <minInclusive value="0"/>
+                <maxInclusive value="50"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="numBanheiros">
+        <simpleType>
+            <restriction base="integer">
+                <minInclusive value="0"/>
+                <maxInclusive value="50"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="valor">
         <complexType>
             <sequence>
-                <element name="moeda" type="string"/>
-                <element name="valor" type="decimal"/>
+                <element name="moeda">
+                    <simpleType>
+                        <restriction base="string">
+                            <enumeration value="BRL"/>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="valor">
+                    <simpleType>
+                        <restriction base="decimal">
+                            <fractionDigits value="2"/>
+                            <totalDigits value="15"/>
+                        </restriction>
+                    </simpleType>
+                </element>
             </sequence>
         </complexType>
     </element>

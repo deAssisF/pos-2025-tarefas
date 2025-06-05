@@ -12,7 +12,13 @@
             <attribute name="versao" type="string" use="required"/>
         </complexType>
     </element>
-    <element name="disciplina" type="string"/>
+    <element name="disciplina">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="professor">
         <complexType>
             <sequence>
@@ -21,10 +27,34 @@
             </sequence>
         </complexType>
     </element>
-    <element name="nome" type="string"/>
-    <element name="matrícula" type="string"/>
-    <element name="turma" type="string"/>
-    <element name="data" type="string"/>
+    <element name="nome">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="100"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="matrícula">
+        <simpleType>
+            <restriction base="string">
+                <pattern value="[0-9]{1,20}"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="turma">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="50"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="data">
+        <simpleType>
+            <restriction base="string">
+                <pattern value="\d{4}-\d{2}-\d{2}"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="questões">
         <complexType>
             <sequence>
@@ -41,8 +71,21 @@
             </sequence>
         </complexType>
     </element>
-    <element name="enunciado" type="string"/>
-    <element name="pontuação" type="string"/>
+    <element name="enunciado">
+        <simpleType>
+            <restriction base="string">
+                <maxLength value="255"/>
+            </restriction>
+        </simpleType>
+    </element>
+    <element name="pontuação">
+        <simpleType>
+            <restriction base="integer">
+                <minInclusive value="0"/>
+                <maxInclusive value="10"/>
+            </restriction>
+        </simpleType>
+    </element>
     <element name="alternativas">
         <complexType>
             <sequence>
@@ -54,7 +97,14 @@
         <complexType>
             <simpleContent>
                 <extension base="string">
-                    <attribute name="correta" type="string" use="required"/>
+                    <attribute name="correta">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="sim"/>
+                                <enumeration value="nao"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
                 </extension>
             </simpleContent>
         </complexType>
