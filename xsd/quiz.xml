@@ -19,7 +19,7 @@
             </alternativas>
         </questão>
         <questão>
-            <enunciado>Qual é o valor de π (pi) arredondado a duas casas decimais?</enunciado>
+            <enunciado>Qual é o valor de (pi) arredondado a duas casas decimais?</enunciado>
             <pontuação>2</pontuação>
             <alternativas>
                 <alternativa correta="nao">3.12</alternativa>

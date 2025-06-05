@@ -1,48 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:i="http://imobiliaria.org" targetNamespace="http://imobiliaria.org" elementFormDefault="qualified">
-    <element name="imobiliaria">
-        <complexType>
-            <sequence>
-                <element ref="i:imovel" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="imovel">
-        <complexType>
-            <sequence>
-                <element ref="i:descricao"/>
-                <element ref="i:proprietario"/>
-                <element ref="i:endereco"/>
-                <element ref="i:caracteristicas"/>
-                <element ref="i:valor"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="descricao">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="255"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="proprietario">
-        <complexType>
-            <sequence>
-                <element ref="i:nome"/>
-                <choice maxOccurs="unbounded">
-                    <element ref="i:email"/>
-                    <element ref="i:telefone"/>
-                </choice>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="nome">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="100"/>
-            </restriction>
-        </simpleType>
-    </element>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:i="http://imobiliaria.org"
+        targetNamespace="http://imobiliaria.org"
+        elementFormDefault="qualified">
+
+    <element name="descricao" type="string"/>
+    <element name="nome" type="string"/>
     <element name="email">
         <simpleType>
             <restriction base="string">
@@ -57,20 +20,13 @@
             </restriction>
         </simpleType>
     </element>
-    <element name="endereco">
-        <complexType>
-            <sequence>
-                <element ref="i:rua"/>
-                <element ref="i:numero" minOccurs="0"/>
-                <element ref="i:bairro"/>
-                <element ref="i:cidade"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="rua">
+    <element name="rua" type="string"/>
+    <element name="bairro" type="string"/>
+    <element name="cidade" type="string"/>
+    <element name="estado">
         <simpleType>
             <restriction base="string">
-                <maxLength value="100"/>
+                <maxLength value="2"/>
             </restriction>
         </simpleType>
     </element>
@@ -78,38 +34,22 @@
         <simpleType>
             <restriction base="integer">
                 <minInclusive value="0"/>
-                <maxInclusive value="99999"/>
+                <maxInclusive value="9999"/>
             </restriction>
         </simpleType>
     </element>
-    <element name="bairro">
+    <element name="valor">
         <simpleType>
-            <restriction base="string">
-                <maxLength value="100"/>
+            <restriction base="decimal">
+                <fractionDigits value="2"/>
+                <totalDigits value="15"/>
             </restriction>
         </simpleType>
-    </element>
-    <element name="cidade">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="100"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="caracteristicas">
-        <complexType>
-            <sequence>
-                <element ref="i:tamanho"/>
-                <element ref="i:numQuartos"/>
-                <element ref="i:numBanheiros"/>
-            </sequence>
-        </complexType>
     </element>
     <element name="tamanho">
         <simpleType>
             <restriction base="decimal">
                 <fractionDigits value="2"/>
-                <totalDigits value="10"/>
             </restriction>
         </simpleType>
     </element>
@@ -129,25 +69,60 @@
             </restriction>
         </simpleType>
     </element>
-    <element name="valor">
+
+    <element name="caracteristicas">
         <complexType>
             <sequence>
-                <element name="moeda">
-                    <simpleType>
-                        <restriction base="string">
-                            <enumeration value="BRL"/>
-                        </restriction>
-                    </simpleType>
-                </element>
-                <element name="valor">
-                    <simpleType>
-                        <restriction base="decimal">
-                            <fractionDigits value="2"/>
-                            <totalDigits value="15"/>
-                        </restriction>
-                    </simpleType>
-                </element>
+                <element ref="i:tamanho"/>
+                <element ref="i:numQuartos"/>
+                <element ref="i:numBanheiros"/>
             </sequence>
         </complexType>
     </element>
+
+    <element name="endereco">
+        <complexType>
+            <sequence>
+                <element ref="i:rua"/>
+                <element ref="i:bairro"/>
+                <element ref="i:cidade"/>
+                <element ref="i:estado"/>
+                <element ref="i:numero" minOccurs="0"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="proprietario">
+        <complexType>
+            <sequence>
+                <element ref="i:nome"/>
+                <choice maxOccurs="unbounded">
+                    <element ref="i:email"/>
+                    <element ref="i:telefone"/>
+                </choice>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="imovel">
+        <complexType>
+            <sequence>
+                <element ref="i:descricao"/>
+                <element ref="i:proprietario"/>
+                <element ref="i:endereco"/>
+                <element ref="i:caracteristicas"/>
+                <element ref="i:valor"/>
+            </sequence>
+            <attribute name="id" type="integer" use="required"/>
+        </complexType>
+    </element>
+
+    <element name="imobiliaria">
+        <complexType>
+            <sequence>
+                <element ref="i:imovel" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
 </schema>

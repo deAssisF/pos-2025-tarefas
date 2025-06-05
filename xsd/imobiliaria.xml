@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<imobiliaria>
-    <imovel id="Imovel_1">
+<?xml version="1.0" encoding="utf-8"?>
+<imobiliaria xmlns="http://imobiliaria.org"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://imobiliaria.org imobiliaria.xsd">
+    <imovel id="1">
         <descricao>Apartamento moderno no centro da cidade</descricao>
         <proprietario>
             <nome>João Silva</nome>
@@ -10,20 +12,19 @@
         </proprietario>
         <endereco>
             <rua>Rua das Flores</rua>
-            <numero>123</numero>
             <bairro>Centro</bairro>
             <cidade>São Paulo</cidade>
             <estado>SP</estado>
         </endereco>
         <caracteristicas>
-            <tamanho>85 m²</tamanho>
+            <tamanho>85.00</tamanho>
             <numQuartos>2</numQuartos>
             <numBanheiros>2</numBanheiros>
         </caracteristicas>
-        <valor moeda="BRL">450000</valor>
+        <valor>450000.00</valor>
     </imovel>
 
-    <imovel id="Imovel_2">
+    <imovel id="2">
         <descricao>Casa ampla com quintal</descricao>
         <proprietario>
             <nome>Maria Oliveira</nome>
@@ -31,20 +32,20 @@
         </proprietario>
         <endereco>
             <rua>Avenida das Palmeiras</rua>
-            <numero>456</numero>
             <bairro>Jardim das Acácias</bairro>
             <cidade>Rio de Janeiro</cidade>
             <estado>RJ</estado>
+            <numero>456</numero>
         </endereco>
         <caracteristicas>
-            <tamanho>200 m²</tamanho>
+            <tamanho>200.00</tamanho>
             <numQuartos>4</numQuartos>
             <numBanheiros>3</numBanheiros>
         </caracteristicas>
-        <valor moeda="BRL">850000</valor>
+        <valor>850000.00</valor>
     </imovel>
 
-    <imovel id="Imovel_3">
+    <imovel id="3">
         <descricao>Kitnet compacta e funcional</descricao>
         <proprietario>
             <nome>Pedro Santos</nome>
@@ -52,20 +53,20 @@
         </proprietario>
         <endereco>
             <rua>Rua do Sol</rua>
-            <numero>78</numero>
             <bairro>Vila Nova</bairro>
             <cidade>Curitiba</cidade>
             <estado>PR</estado>
+            <numero>78</numero>
         </endereco>
         <caracteristicas>
-            <tamanho>30 m²</tamanho>
+            <tamanho>30.00</tamanho>
             <numQuartos>1</numQuartos>
             <numBanheiros>1</numBanheiros>
         </caracteristicas>
-        <valor moeda="BRL">120000</valor>
+        <valor>120000.00</valor>
     </imovel>
 
-    <imovel id="Imovel_4">
+    <imovel id="4">
         <descricao>Sobrado com piscina</descricao>
         <proprietario>
             <nome>Ana Costa</nome>
@@ -73,20 +74,20 @@
         </proprietario>
         <endereco>
             <rua>Rua das Acácias</rua>
-            <numero></numero>
             <bairro>Jardim Primavera</bairro>
             <cidade>Belo Horizonte</cidade>
             <estado>MG</estado>
+            <numero>0</numero>
         </endereco>
         <caracteristicas>
-            <tamanho>250 m²</tamanho>
+            <tamanho>250.00</tamanho>
             <numQuartos>5</numQuartos>
             <numBanheiros>4</numBanheiros>
         </caracteristicas>
-        <valor moeda="BRL">1200000</valor>
+        <valor>1200000.00</valor>
     </imovel>
 
-    <imovel id="Imovel_5">
+    <imovel id="5">
         <descricao>Chácara com área verde</descricao>
         <proprietario>
             <nome>Lucas Almeida</nome>
@@ -95,16 +96,16 @@
         </proprietario>
         <endereco>
             <rua>Estrada do Campo</rua>
-            <numero>SN</numero>
             <bairro>Zona Rural</bairro>
             <cidade>Campinas</cidade>
             <estado>SP</estado>
+            <numero>0</numero>
         </endereco>
         <caracteristicas>
-            <tamanho>5000 m²</tamanho>
+            <tamanho>5000.00</tamanho>
             <numQuartos>3</numQuartos>
             <numBanheiros>2</numBanheiros>
         </caracteristicas>
-        <valor moeda="BRL">2500000</valor>
+        <valor>2500000.00</valor>
     </imovel>
 </imobiliaria>
