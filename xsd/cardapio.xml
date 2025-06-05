@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cardapio>
+    <prato id="1">
+        <nome>Pão de Queijo Mineiro</nome>
+        <descricao>Delicioso pão de queijo tradicional de Minas Gerais</descricao>
+        <ingredientes>
+            <ingrediente>Polvilho</ingrediente>
+            <ingrediente>Queijo Minas</ingrediente>
+            <ingrediente>Leite</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">15.00</preco>
+        <calorias>150</calorias>
+        <tempoPreparo>20 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="2">
+        <nome>Feijoada Completa</nome>
+        <descricao>Prato tradicional brasileiro com feijão preto e variedade de carnes</descricao>
+        <ingredientes>
+            <ingrediente>Feijão preto</ingrediente>
+            <ingrediente>Linguiça</ingrediente>
+            <ingrediente>Costela</ingrediente>
+            <ingrediente>Couve</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">45.00</preco>
+        <calorias>850</calorias>
+        <tempoPreparo>4 horas</tempoPreparo>
+    </prato>
+
+    <prato id="3">
+        <nome>Brigadeiro Gourmet</nome>
+        <descricao>Doce brasileiro com chocolate 70% e granulado especial</descricao>
+        <ingredientes>
+            <ingrediente>Chocolate amargo</ingrediente>
+            <ingrediente>Leite condensado</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">8.00</preco>
+        <calorias>120</calorias>
+        <tempoPreparo>25 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="4">
+        <nome>Moqueca Capixaba</nome>
+        <descricao>Peixe cozido em panela de barro com açafrão e coentro</descricao>
+        <ingredientes>
+            <ingrediente>Peixe branco</ingrediente>
+            <ingrediente>Azeite de dendê</ingrediente>
+            <ingrediente>Cebola</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">55.00</preco>
+        <calorias>320</calorias>
+        <tempoPreparo>50 minutos</tempoPreparo>
+    </prato>
+
+    <prato id="5">
+        <nome>Coxinha de Frango</nome>
+        <descricao>Salgado em forma de gota com recheio cremoso de frango</descricao>
+        <ingredientes>
+            <ingrediente>Massa de batata</ingrediente>
+            <ingrediente>Frango desfiado</ingrediente>
+            <ingrediente>Catupiry</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">7.00</preco>
+        <calorias>250</calorias>
+        <tempoPreparo>40 minutos</tempoPreparo>
+    </prato>
+</cardapio>

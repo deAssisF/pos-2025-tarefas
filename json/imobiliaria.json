@@ -1,0 +1,67 @@
+{
+    "imobiliaria": {
+      "imovel": [
+        {
+          "id": {
+            "valor": "Imovel_1"
+          },
+          "descricao": "Apartamento moderno no centro da cidade",
+          "proprietario": {
+            "nome": "João Silva",
+            "contatos": {
+              "email": "joao.silva@email.com",
+              "telefone": ["+55 11 98765-4321", "+55 11 91234-5678"]
+            }
+          },
+          "endereco": {
+            "rua": "Rua das Flores",
+            "numero": {
+              "valor": "123"
+            },
+            "bairro": "Centro",
+            "cidade": "São Paulo",
+            "estado": "SP"
+          },
+          "caracteristicas": {
+            "tamanho": "85 m²",
+            "numQuartos": "2",
+            "numBanheiros": "2"
+          },
+          "valor": {
+            "moeda": "BRL",
+            "valor": "450000"
+          }
+        },
+        {
+          "id": {
+            "valor": "Imovel_2"
+          },
+          "descricao": "Casa ampla com quintal",
+          "proprietario": {
+            "nome": "Maria Oliveira",
+            "contatos": {
+              "telefone": "+55 21 99876-5432"
+            }
+          },
+          "endereco": {
+            "rua": "Avenida das Palmeiras",
+            "numero": {
+              "valor": "456"
+            },
+            "bairro": "Jardim das Acácias",
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ"
+          },
+          "caracteristicas": {
+            "tamanho": "200 m²",
+            "numQuartos": "4",
+            "numBanheiros": "3"
+          },
+          "valor": {
+            "moeda": "BRL",
+            "valor": "850000"
+          }
+        }
+      ]
+    }
+  }

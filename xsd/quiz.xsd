@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:q="http://quiz.org" targetNamespace="http://quiz.org" elementFormDefault="qualified">
+    <element name="quiz">
+        <complexType>
+            <sequence>
+                <element ref="q:disciplina"/>
+                <element ref="q:professor"/>
+                <element ref="q:turma"/>
+                <element ref="q:data"/>
+                <element ref="q:questões"/>
+            </sequence>
+            <attribute name="versao" type="string" use="required"/>
+        </complexType>
+    </element>
+    <element name="disciplina" type="string"/>
+    <element name="professor">
+        <complexType>
+            <sequence>
+                <element ref="q:nome"/>
+                <element ref="q:matrícula" minOccurs="0"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="nome" type="string"/>
+    <element name="matrícula" type="string"/>
+    <element name="turma" type="string"/>
+    <element name="data" type="string"/>
+    <element name="questões">
+        <complexType>
+            <sequence>
+                <element ref="q:questão" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="questão">
+        <complexType>
+            <sequence>
+                <element ref="q:enunciado"/>
+                <element ref="q:pontuação"/>
+                <element ref="q:alternativas"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="enunciado" type="string"/>
+    <element name="pontuação" type="string"/>
+    <element name="alternativas">
+        <complexType>
+            <sequence>
+                <element ref="q:alternativa" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="alternativa">
+        <complexType>
+            <simpleContent>
+                <extension base="string">
+                    <attribute name="correta" type="string" use="required"/>
+                </extension>
+            </simpleContent>
+        </complexType>
+    </element>
+</schema>

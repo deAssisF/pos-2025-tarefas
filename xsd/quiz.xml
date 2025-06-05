@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz versao="1.0">
+    <disciplina>Matemática</disciplina>
+    <professor>
+        <nome>João Silva</nome>
+        <matrícula>12345</matrícula>
+    </professor>
+    <turma>8º Ano</turma>
+    <data>2023-10-01</data>
+    <questões>
+        <questão>
+            <enunciado>Qual é o resultado de 2 + 2?</enunciado>
+            <pontuação>1</pontuação>
+            <alternativas>
+                <alternativa correta="nao">3</alternativa>
+                <alternativa correta="sim">4</alternativa>
+                <alternativa correta="nao">5</alternativa>
+                <alternativa correta="nao">6</alternativa>
+            </alternativas>
+        </questão>
+        <questão>
+            <enunciado>Qual é o valor de π (pi) arredondado a duas casas decimais?</enunciado>
+            <pontuação>2</pontuação>
+            <alternativas>
+                <alternativa correta="nao">3.12</alternativa>
+                <alternativa correta="sim">3.14</alternativa>
+                <alternativa correta="nao">3.16</alternativa>
+                <alternativa correta="nao">3.18</alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+</quiz>
