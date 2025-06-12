@@ -1,32 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<quiz versao="1.0">
-    <disciplina>Matemática</disciplina>
-    <professor>
-        <nome>João Silva</nome>
-        <matrícula>12345</matrícula>
-    </professor>
-    <turma>8º Ano</turma>
-    <data>2023-10-01</data>
-    <questões>
-        <questão>
-            <enunciado>Qual é o resultado de 2 + 2?</enunciado>
-            <pontuação>1</pontuação>
-            <alternativas>
-                <alternativa correta="nao">3</alternativa>
-                <alternativa correta="sim">4</alternativa>
-                <alternativa correta="nao">5</alternativa>
-                <alternativa correta="nao">6</alternativa>
-            </alternativas>
-        </questão>
-        <questão>
-            <enunciado>Qual é o valor de (pi) arredondado a duas casas decimais?</enunciado>
-            <pontuação>2</pontuação>
-            <alternativas>
-                <alternativa correta="nao">3.12</alternativa>
-                <alternativa correta="sim">3.14</alternativa>
-                <alternativa correta="nao">3.16</alternativa>
-                <alternativa correta="nao">3.18</alternativa>
-            </alternativas>
-        </questão>
-    </questões>
-</quiz>
+<q:quiz xmlns:q="http://quiz.org"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://quiz.org quiz.xsd"
+        versao="1.0">
+
+    <q:disciplina>Matemática</q:disciplina>
+    <q:professor>
+        <q:nome>João Silva</q:nome>
+        <q:matrícula>12345</q:matrícula>
+    </q:professor>
+    <q:turma>8º Ano</q:turma>
+    <q:data>2023-10-01</q:data>
+
+    <q:questões>
+        <q:questão>
+            <q:enunciado>Qual é o resultado de 2 + 2?</q:enunciado>
+            <q:pontuação>1</q:pontuação>
+            <q:alternativas>
+                <q:alternativa correta="nao">3</q:alternativa>
+                <q:alternativa correta="sim">4</q:alternativa>
+                <q:alternativa correta="nao">5</q:alternativa>
+                <q:alternativa correta="nao">6</q:alternativa>
+            </q:alternativas>
+        </q:questão>
+
+        <q:questão>
+            <q:enunciado>Qual é o valor de pi arredondado a duas casas decimais?</q:enunciado>
+            <q:pontuação>2</q:pontuação>
+            <q:alternativas>
+                <q:alternativa correta="nao">3.12</q:alternativa>
+                <q:alternativa correta="sim">3.14</q:alternativa>
+                <q:alternativa correta="nao">3.16</q:alternativa>
+                <q:alternativa correta="nao">3.18</q:alternativa>
+            </q:alternativas>
+        </q:questão>
+
+        <q:questão>
+            <q:enunciado>Quanto é 5 x 6?</q:enunciado>
+            <q:pontuação>1</q:pontuação>
+            <q:alternativas>
+                <q:alternativa correta="nao">20</q:alternativa>
+                <q:alternativa correta="sim">30</q:alternativa>
+                <q:alternativa correta="nao">25</q:alternativa>
+                <q:alternativa correta="nao">35</q:alternativa>
+            </q:alternativas>
+        </q:questão>
+
+        <q:questão>
+            <q:enunciado>Qual número é primo?</q:enunciado>
+            <q:pontuação>2</q:pontuação>
+            <q:alternativas>
+                <q:alternativa correta="sim">7</q:alternativa>
+                <q:alternativa correta="nao">9</q:alternativa>
+                <q:alternativa correta="nao">15</q:alternativa>
+                <q:alternativa correta="nao">21</q:alternativa>
+            </q:alternativas>
+        </q:questão>
+
+        <q:questão>
+            <q:enunciado>Qual é a raiz quadrada de 81?</q:enunciado>
+            <q:pontuação>1</q:pontuação>
+            <q:alternativas>
+                <q:alternativa correta="sim">9</q:alternativa>
+                <q:alternativa correta="nao">8</q:alternativa>
+                <q:alternativa correta="nao">7</q:alternativa>
+                <q:alternativa correta="nao">6</q:alternativa>
+            </q:alternativas>
+        </q:questão>
+    </q:questões>
+</q:quiz>

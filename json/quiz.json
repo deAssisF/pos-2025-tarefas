@@ -1,80 +1,76 @@
 {
-    "quiz": {
-      "versao": {
-        "valor": "1.0"
-      },
-      "disciplina": "Matemática",
-      "professor": {
-        "nome": "João Silva",
-        "matrícula": {
-          "valor": "12345"
-        }
-      },
-      "turma": "8º Ano",
-      "data": "2023-10-01",
-      "questões": {
-        "questão": [
-          {
-            "enunciado": "Qual é o resultado de 2 + 2?",
-            "pontuação": "1",
-            "alternativas": [
-              {
-                "correta": {
-                  "valor": "nao"
-                },
-                "texto": "3"
-              },
-              {
-                "correta": {
-                  "valor": "sim"
-                },
-                "texto": "4"
-              },
-              {
-                "correta": {
-                  "valor": "nao"
-                },
-                "texto": "5"
-              },
-              {
-                "correta": {
-                  "valor": "nao"
-                },
-                "texto": "6"
-              }
-            ]
-          },
-          {
-            "enunciado": "Qual é o valor de π (pi) arredondado a duas casas decimais?",
-            "pontuação": "2",
-            "alternativas": [
-              {
-                "correta": {
-                  "valor": "nao"
-                },
-                "texto": "3.12"
-              },
-              {
-                "correta": {
-                  "valor": "sim"
-                },
-                "texto": "3.14"
-              },
-              {
-                "correta": {
-                  "valor": "nao"
-                },
-                "texto": "3.16"
-              },
-              {
-                "correta": {
-                  "valor": "nao"
-                },
-                "texto": "3.18"
-              }
+  "quiz": {
+    "versao": "1.0",
+    "disciplina": "Matemática",
+    "professor": {
+      "nome": "João Silva",
+      "matrícula": "12345"
+    },
+    "turma": "8º Ano",
+    "data": "2023-10-01",
+    "questões": {
+      "questão": [
+        {
+          "enunciado": "Qual é o resultado de 2 + 2?",
+          "pontuação": "1",
+          "alternativas": {
+            "alternativa": [
+              { "correta": "nao", "valor": "3" },
+              { "correta": "sim", "valor": "4" },
+              { "correta": "nao", "valor": "5" },
+              { "correta": "nao", "valor": "6" }
             ]
           }
-        ]
-      }
+        },
+        {
+          "enunciado": "Qual é o valor de pi arredondado a duas casas decimais?",
+          "pontuação": "2",
+          "alternativas": {
+            "alternativa": [
+              { "correta": "nao", "valor": "3.12" },
+              { "correta": "sim", "valor": "3.14" },
+              { "correta": "nao", "valor": "3.16" },
+              { "correta": "nao", "valor": "3.18" }
+            ]
+          }
+        },
+        {
+          "enunciado": "Quanto é 5 x 6?",
+          "pontuação": "1",
+          "alternativas": {
+            "alternativa": [
+              { "correta": "nao", "valor": "20" },
+              { "correta": "sim", "valor": "30" },
+              { "correta": "nao", "valor": "25" },
+              { "correta": "nao", "valor": "35" }
+            ]
+          }
+        },
+        {
+          "enunciado": "Qual número é primo?",
+          "pontuação": "2",
+          "alternativas": {
+            "alternativa": [
+              { "correta": "sim", "valor": "7" },
+              { "correta": "nao", "valor": "9" },
+              { "correta": "nao", "valor": "15" },
+              { "correta": "nao", "valor": "21" }
+            ]
+          }
+        },
+        {
+          "enunciado": "Qual é a raiz quadrada de 81?",
+          "pontuação": "1",
+          "alternativas": {
+            "alternativa": [
+              { "correta": "sim", "valor": "9" },
+              { "correta": "nao", "valor": "8" },
+              { "correta": "nao", "valor": "7" },
+              { "correta": "nao", "valor": "6" }
+            ]
+          }
+        }
+      ]
     }
   }
+}

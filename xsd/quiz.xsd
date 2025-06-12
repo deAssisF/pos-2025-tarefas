@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:q="http://quiz.org" targetNamespace="http://quiz.org" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:q="http://quiz.org"
+        targetNamespace="http://quiz.org"
+        elementFormDefault="qualified">
+
+    <element name="nome" type="string"/>
+    <element name="matrícula" type="string"/>
+    <element name="disciplina" type="string"/>
+    <element name="turma" type="string"/>
+    <element name="data" type="string"/>
+    <element name="enunciado" type="string"/>
+    <element name="pontuação" type="string"/>
+
+    <element name="alternativa">
+        <complexType>
+            <simpleContent>
+                <extension base="string">
+                    <attribute name="correta" use="required">
+                        <simpleType>
+                            <restriction base="string">
+                                <enumeration value="sim"/>
+                                <enumeration value="nao"/>
+                            </restriction>
+                        </simpleType>
+                    </attribute>
+                </extension>
+            </simpleContent>
+        </complexType>
+    </element>
+
+    <element name="alternativas">
+        <complexType>
+            <sequence>
+                <element ref="q:alternativa" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="questão">
+        <complexType>
+            <sequence>
+                <element ref="q:enunciado"/>
+                <element ref="q:pontuação"/>
+                <element ref="q:alternativas"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="questões">
+        <complexType>
+            <sequence>
+                <element ref="q:questão" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="professor">
+        <complexType>
+            <sequence>
+                <element ref="q:nome"/>
+                <element ref="q:matrícula" minOccurs="0"/>
+            </sequence>
+        </complexType>
+    </element>
+
     <element name="quiz">
         <complexType>
             <sequence>
@@ -12,101 +76,5 @@
             <attribute name="versao" type="string" use="required"/>
         </complexType>
     </element>
-    <element name="disciplina">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="100"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="professor">
-        <complexType>
-            <sequence>
-                <element ref="q:nome"/>
-                <element ref="q:matrícula" minOccurs="0"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="nome">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="100"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="matrícula">
-        <simpleType>
-            <restriction base="string">
-                <pattern value="[0-9]{1,20}"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="turma">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="50"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="data">
-        <simpleType>
-            <restriction base="string">
-                <pattern value="\d{4}-\d{2}-\d{2}"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="questões">
-        <complexType>
-            <sequence>
-                <element ref="q:questão" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="questão">
-        <complexType>
-            <sequence>
-                <element ref="q:enunciado"/>
-                <element ref="q:pontuação"/>
-                <element ref="q:alternativas"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="enunciado">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="255"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="pontuação">
-        <simpleType>
-            <restriction base="integer">
-                <minInclusive value="0"/>
-                <maxInclusive value="10"/>
-            </restriction>
-        </simpleType>
-    </element>
-    <element name="alternativas">
-        <complexType>
-            <sequence>
-                <element ref="q:alternativa" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="alternativa">
-        <complexType>
-            <simpleContent>
-                <extension base="string">
-                    <attribute name="correta">
-                        <simpleType>
-                            <restriction base="string">
-                                <enumeration value="sim"/>
-                                <enumeration value="nao"/>
-                            </restriction>
-                        </simpleType>
-                    </attribute>
-                </extension>
-            </simpleContent>
-        </complexType>
-    </element>
+
 </schema>
