@@ -1,0 +1,39 @@
+{
+  "cardapio": {
+    "prato": [
+      {
+        "id": "1",
+        "nome": "Pão de Queijo Mineiro",
+        "descricao": "Delicioso pão de queijo tradicional de Minas Gerais",
+        "ingredientes": {
+          "ingrediente": ["Polvilho", "Queijo Minas", "Leite"]
+        },
+        "preco": "15.00",
+        "calorias": "150",
+        "tempoPreparo": "20 minutos"
+      },
+      {
+        "id": "2",
+        "nome": "Feijoada Completa",
+        "descricao": "Prato tradicional brasileiro com feijão preto e variedade de carnes",
+        "ingredientes": {
+          "ingrediente": ["Feijão preto", "Linguiça", "Costela", "Couve"]
+        },
+        "preco": "45.00",
+        "calorias": "850",
+        "tempoPreparo": "240 minutos"
+      },
+      {
+        "id": "3",
+        "nome": "Brigadeiro Gourmet",
+        "descricao": "Doce brasileiro com chocolate 70% e granulado especial",
+        "ingredientes": {
+          "ingrediente": ["Chocolate amargo", "Leite condensado", "Manteiga"]
+        },
+        "preco": "8.00",
+        "calorias": "120",
+        "tempoPreparo": "25 minutos"
+      }
+    ]
+  }
+}
